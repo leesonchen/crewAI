@@ -1,6 +1,8 @@
 import os
 from typing import Any, Dict, List, Optional, Union
 
+from pydantic import SecretStr
+
 from crewai.cli.constants import DEFAULT_LLM_MODEL, ENV_VARS, LITELLM_PARAMS
 from crewai.llm import LLM
 
@@ -52,9 +54,19 @@ def create_llm(
         max_tokens: Optional[int] = getattr(llm_value, "max_tokens", None)
         logprobs: Optional[int] = getattr(llm_value, "logprobs", None)
         timeout: Optional[float] = getattr(llm_value, "timeout", None)
-        api_key: Optional[str] = getattr(llm_value, "api_key", None)
-        base_url: Optional[str] = getattr(llm_value, "base_url", None)
-        api_base: Optional[str] = getattr(llm_value, "api_base", None)
+        api_key: Optional[str] = getattr(llm_value, "api_key", None) or getattr(
+            llm_value, "openai_api_key", None
+        )
+        base_url: Optional[str] = getattr(llm_value, "base_url", None) or getattr(
+            llm_value, "openai_api_base", None
+        )
+        api_base: Optional[str] = getattr(llm_value, "api_base", None) or getattr(
+            llm_value, "openai_api_base", None
+        )
+
+        # [clx] Convert SecretStr to str if necessary
+        if isinstance(api_key, SecretStr):
+            api_key = api_key.get_secret_value()
 
         created_llm = LLM(
             model=model,
