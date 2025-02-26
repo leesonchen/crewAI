@@ -486,7 +486,7 @@ interactions:
       "asttokens": "2.4.1", "pure_eval": "0.2.3", "stack_data": "0.6.3", "decorator":
       "5.1.1", "wcwidth": "0.2.13", "prompt_toolkit": "3.0.48", "parso": "0.8.4",
       "colorama": "0.4.6", "jedi": "0.19.1", "IPython": "8.28.0", "pyvis": "0.3.2",
-      "crewai": "0.102.0"}}, "OS": {"Hostname": "Lorenzes-MacBook-Pro.local", "OS":
+      "crewai": "0.102.1"}}, "OS": {"Hostname": "Lorenzes-MacBook-Pro.local", "OS":
       "Darwin", "OS Version": "Darwin Kernel Version 24.0.0: Mon Aug 12 20:51:54 PDT
       2024; root:xnu-11215.1.10~2/RELEASE_ARM64_T6000", "OS Release": "24.0.0"}, "CPU":
       {"Physical cores": 10, "Total cores": 10, "CPU Usage": "21.8%"}, "RAM": {"Total":
@@ -541,7 +541,7 @@ interactions:
       "2.7.2", "grpcio-tools": "1.70.0", "uvicorn": "0.32.0", "chroma-hnswlib": "0.7.6",
       "jsonpatch": "1.33", "click": "8.1.8", "jsonpointer": "3.0.0", "lxml": "5.3.1",
       "numpy": "1.26.4", "docstring_parser": "0.16", "attrs": "24.2.0", "mkdocstrings-python":
-      "1.12.2", "crewai": "0.102.0", "cairocffi": "1.7.1", "packaging": "23.2", "kubernetes":
+      "1.12.2", "crewai": "0.102.1", "cairocffi": "1.7.1", "packaging": "23.2", "kubernetes":
       "31.0.0", "appdirs": "1.4.4", "certifi": "2024.8.30", "h2": "4.2.0", "starlette":
       "0.41.0", "tenacity": "9.0.0", "cffi": "1.17.1", "pytest-vcr": "1.0.2", "aiohttp":
       "3.11.11", "jsonschema": "4.23.0", "google-crc32c": "1.6.0", "pdfminer.six":
@@ -1387,7 +1387,7 @@ interactions:
       "asttokens": "2.4.1", "pure_eval": "0.2.3", "stack_data": "0.6.3", "decorator":
       "5.1.1", "wcwidth": "0.2.13", "prompt_toolkit": "3.0.48", "parso": "0.8.4",
       "colorama": "0.4.6", "jedi": "0.19.1", "IPython": "8.28.0", "pyvis": "0.3.2",
-      "crewai": "0.102.0"}}, "OS": {"Hostname": "Lorenzes-MacBook-Pro.local", "OS":
+      "crewai": "0.102.1"}}, "OS": {"Hostname": "Lorenzes-MacBook-Pro.local", "OS":
       "Darwin", "OS Version": "Darwin Kernel Version 24.0.0: Mon Aug 12 20:51:54 PDT
       2024; root:xnu-11215.1.10~2/RELEASE_ARM64_T6000", "OS Release": "24.0.0"}, "CPU":
       {"Physical cores": 10, "Total cores": 10, "CPU Usage": "21.8%"}, "RAM": {"Total":
@@ -1442,7 +1442,7 @@ interactions:
       "2.7.2", "grpcio-tools": "1.70.0", "uvicorn": "0.32.0", "chroma-hnswlib": "0.7.6",
       "jsonpatch": "1.33", "click": "8.1.8", "jsonpointer": "3.0.0", "lxml": "5.3.1",
       "numpy": "1.26.4", "docstring_parser": "0.16", "attrs": "24.2.0", "mkdocstrings-python":
-      "1.12.2", "crewai": "0.102.0", "cairocffi": "1.7.1", "packaging": "23.2", "kubernetes":
+      "1.12.2", "crewai": "0.102.1", "cairocffi": "1.7.1", "packaging": "23.2", "kubernetes":
       "31.0.0", "appdirs": "1.4.4", "certifi": "2024.8.30", "h2": "4.2.0", "starlette":
       "0.41.0", "tenacity": "9.0.0", "cffi": "1.17.1", "pytest-vcr": "1.0.2", "aiohttp":
       "3.11.11", "jsonschema": "4.23.0", "google-crc32c": "1.6.0", "pdfminer.six":

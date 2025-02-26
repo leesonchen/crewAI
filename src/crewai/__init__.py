@@ -14,7 +14,7 @@ warnings.filterwarnings(
     category=UserWarning,
     module="pydantic.main",
 )
-__version__ = "0.102.0"
+__version__ = "0.102.1"
 __all__ = [
     "Agent",
     "Crew",
