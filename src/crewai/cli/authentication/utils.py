@@ -93,10 +93,13 @@ class TokenManager:
         Get the secure storage path based on the operating system.
 
         :return: The secure storage path.
+        :raises: ValueError: If required environment variable is not found
         """
         if sys.platform == "win32":
             # Windows: Use %LOCALAPPDATA%
             base_path = os.environ.get("LOCALAPPDATA")
+            if base_path is None:
+                raise ValueError("LOCALAPPDATA environment variable not found")
         elif sys.platform == "darwin":
             # macOS: Use ~/Library/Application Support
             base_path = os.path.expanduser("~/Library/Application Support")
@@ -108,7 +111,7 @@ class TokenManager:
         storage_path = Path(base_path) / app_name
 
         storage_path.mkdir(parents=True, exist_ok=True)
-
+        print(f"[leeson]Secure storage path: {storage_path}")
         return storage_path
 
     def save_secure_file(self, filename: str, content: bytes) -> None:

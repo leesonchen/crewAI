@@ -169,7 +169,7 @@ class Agent(BaseAgent):
         """
         if self.tools_handler:
             self.tools_handler.last_used_tool = {}  # type: ignore # Incompatible types in assignment (expression has type "dict[Never, Never]", variable has type "ToolCalling")
-
+        print(f'[leeson] Executing task "{task.name}"')
         task_prompt = task.prompt()
 
         # If the task requires output in JSON or Pydantic format,
@@ -196,6 +196,7 @@ class Agent(BaseAgent):
             )
 
         if self.crew and self.crew.memory:
+            print(f'[leeson] before ContextualMemory "{task.name}"')
             contextual_memory = ContextualMemory(
                 self.crew.memory_config,
                 self.crew._short_term_memory,
