@@ -48,7 +48,7 @@ class Telemetry:
         self.ready = False
         self.trace_set = False
 
-        if os.getenv("OTEL_SDK_DISABLED", "false").lower() == "true":
+        if os.getenv("OTEL_SDK_DISABLED", "true").lower() == "true":
             return
 
         try:
