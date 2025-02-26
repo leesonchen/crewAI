@@ -21,3 +21,6 @@ build-backend = "hatchling.build"
 
 [tool.crewai]
 type = "crew"
+
+[tool.hatch.metadata]
+allow-direct-references = true
