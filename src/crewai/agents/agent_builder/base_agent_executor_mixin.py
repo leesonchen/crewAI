@@ -92,7 +92,7 @@ class CrewAgentExecutorMixin:
                 pass
             except Exception as e:
                 print(f"Failed to add to long term memory: {e}")
-                pass
+                raise e
 
     def _ask_human_input(self, final_answer: str) -> str:
         """Prompt human input with mode-appropriate messaging."""

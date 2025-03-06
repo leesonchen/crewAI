@@ -1114,6 +1114,9 @@ class Crew(BaseModel):
             "tasks",
             "knowledge_sources",
             "knowledge",
+            "short_term_memory",
+            "long_term_memory",
+            "entity_memory",
         }
 
         cloned_agents = [agent.copy() for agent in self.agents]
@@ -1123,6 +1126,9 @@ class Crew(BaseModel):
         cloned_tasks = []
         existing_knowledge_sources = shallow_copy(self.knowledge_sources)
         existing_knowledge = shallow_copy(self.knowledge)
+        existing_long_term_memory = shallow_copy(self.long_term_memory)
+        existing_short_term_memory = shallow_copy(self.short_term_memory)
+        existing_entity_memory = shallow_copy(self.entity_memory)
 
         for task in self.tasks:
             cloned_task = task.copy(cloned_agents, task_mapping)
@@ -1149,6 +1155,9 @@ class Crew(BaseModel):
             tasks=cloned_tasks,
             knowledge_sources=existing_knowledge_sources,
             knowledge=existing_knowledge,
+            long_term_memory=existing_long_term_memory,
+            short_term_memory=existing_short_term_memory,
+            entity_memory=existing_entity_memory,
         )
 
         return copied_crew
